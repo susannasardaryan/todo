@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=National+Park:wght@200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #4E3D37;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.contentContainer {
+  background-color: #FDF9F6;
+  height: 100vh;
+  display: flex;
+  font-family: "Winky Sans", sans-serif;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contentContainer h1{
+  margin: 1em;
+}
+
+.addValue input {
+  border: none;
+  padding: 0.5rem 1.5rem;
+  background-color: white;
+  border-radius: 30px;
+}
+
+.addValue input:focus,
+.addValue input:active {
+  outline: none;
+  border: 1px solid rgb(146, 146, 146);
+}
+
+.defaultButton {
+  background-color: #ff5845;
+  padding: 0.55rem 1.4rem;
+  border-radius: 30px;
+  border: none;
+  color: white;
+}
+
+.addButton {
+  margin-left: -35px;
+}
+
+.todoList {
+  margin: 1.5rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+
+  padding: 5px;
+
+}
+
+.todo button {
+  background: none;
+  /* border: 1px solid #ff5845; */
+  /* border-radius: 14px; */
+  border: none;
+  padding: 0.2rem;
+}
+
+.todo button img {
+  width: 15px;
+}
+.todo span{
+  margin-right: 7em;
+}
+.todo div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.todo input[type='checkbox']{
+  -webkit-appearance: none;
+  appearance: none;
+  width: 1.15em;
+  height: 1.15em;
+  margin-right: 0.31rem;
+  border: 0.1em solid grey;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.todo input[type='checkbox']:checked{
+  background-color: lightgray;
+}
+
+.withOverline {
+  text-decoration: line-through;
+}
+
