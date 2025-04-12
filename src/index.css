@@ -8,6 +8,7 @@
 
 button:hover {
   cursor: pointer;
+  background-color: #ff3b2e;
 }
 
 .contentContainer {
@@ -16,18 +17,47 @@ button:hover {
   display: flex;
   font-family: "Winky Sans", sans-serif;
   align-items: center;
+  /* justify-content: center; */
   flex-direction: column;
+  gap: 10px;
 }
 
 .contentContainer h1{
   margin: 1em;
 }
 
-.addValue input {
-  border: none;
-  padding: 0.5rem 1.5rem;
-  background-color: white;
-  border-radius: 30px;
+.tabs{
+  display: flex;
+  list-style: none;
+  gap: 10px;
+
+  margin-bottom: 1rem;
+}
+
+.tabs li{
+  font-size: 20px;
+  border-bottom:1px solid #4E3D37 ;
+}
+
+.tabs li:hover{
+  cursor: pointer;
+}
+
+.tabs li.active{
+  color: #ff5845;
+}
+.toolBar{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 50px;
+}
+.addValue input, .filterValue input {
+  border: 1px solid #ccc;
+  padding: 0.75rem 1rem;
+  border-radius: 9999px;
+  font-size: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 .addValue input:focus,
@@ -37,19 +67,25 @@ button:hover {
 }
 
 .defaultButton {
-  background-color: #ff5845;
-  padding: 0.55rem 1.4rem;
-  border-radius: 30px;
-  border: none;
+  background-color: #ff5e4d;
   color: white;
+  border: none;
+  border-radius: 9999px;
+  padding: 0.95rem 1.5rem;
+  font-weight: bold;
+  transition: background-color 0.2s;
 }
 
 .addButton {
-  margin-left: -35px;
+  margin-left: -2.7rem;
+}
+
+.filterValue{
+  margin: 0.5rem 0;
 }
 
 .todoList {
-  margin: 1.5rem;
+  margin: 1.5rem 0;
 
   display: flex;
   flex-direction: column;
@@ -58,11 +94,13 @@ button:hover {
 
 .todo {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  gap: 5px;
-
-  padding: 5px;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.75rem;
+  border-radius: 0.5rem;
+  background-color: #fffdfc;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
 
 }
 
@@ -104,3 +142,9 @@ button:hover {
   text-decoration: line-through;
 }
 
+.footerPart{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+}
