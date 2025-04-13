@@ -104,6 +104,12 @@ button:hover {
 
 }
 
+.date{
+  font-size: 14px;
+  margin: 2px;
+  color: gray;
+}
+
 .todo button {
   background: none;
   /* border: 1px solid #ff5845; */

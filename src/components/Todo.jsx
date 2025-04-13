@@ -1,6 +1,15 @@
 import { useState } from "react";
 
-const Todo = ({ id, value, isDone, onEdit, onDelete, onCheckboxClick }) => {
+const Todo = ({
+  id,
+  value,
+  created,
+  modified,
+  isDone,
+  onEdit,
+  onDelete,
+  onCheckboxClick,
+}) => {
   const [changedValue, setChangedValue] = useState(value);
   const [isEditMode, setIsEditMode] = useState(false);
 
@@ -15,11 +24,21 @@ const Todo = ({ id, value, isDone, onEdit, onDelete, onCheckboxClick }) => {
 
   const handleSaveInputChange = (e) => setChangedValue(e.target.value);
 
+  const DATE = new Date(modified || created).toLocaleString("en-US", {
+    weekday: "short",
+    hour: "2-digit",
+    minute: "2-digit",
+  });
+
   return (
     <div className="todo">
       {isEditMode ? (
         <>
-          <input type="text" onChange={handleSaveInputChange} value={changedValue} />
+          <input
+            type="text"
+            onChange={handleSaveInputChange}
+            value={changedValue}
+          />
           <button onClick={() => handleSave(id)}>Save</button>
           <button onClick={() => handleSave()}>Cancel</button>
         </>
@@ -31,7 +50,10 @@ const Todo = ({ id, value, isDone, onEdit, onDelete, onCheckboxClick }) => {
               onChange={() => onCheckboxClick(id)}
               checked={isDone}
             />
-            <span className={isDone ? "withOverline" : ""}>{value}</span>
+            <p className={isDone ? "withOverline" : ""}>
+              {value}
+              <span className="date"> ({DATE})</span>
+            </p>
           </div>
           <div>
             <button onClick={() => onDelete(id)}>

@@ -22,9 +22,12 @@ const TodoContainer = () => {
       {
         id: generateId,
         value,
+        created: Date.now("2015-03-25T12:00"),
+        modified: null
       },
     ]);
   }
+
 
   const handleEdit = (id, value) => {
     const changedTodos = todos.map((todo) => {
@@ -32,6 +35,7 @@ const TodoContainer = () => {
         return {
           ...todo,
           value,
+          modified: Date.now("2015-03-25T12:00"),
         };
       }
       return todo;
@@ -40,7 +44,11 @@ const TodoContainer = () => {
   };
 
   const deleteTodo = (id) => {
-    setTodos(todos.filter((todo) => todo.id !== id));
+    let todo = todos.find((todo) => todo.id === id);
+    const isConfirmed = confirm(
+      `Do you want to delete this todo : ${todo.value}`
+    );
+    if (isConfirmed) setTodos(todos.filter((todo) => todo.id !== id));
   };
 
   const markDone = (id) => {
@@ -65,9 +73,11 @@ const TodoContainer = () => {
       .toLowerCase()
       .includes(inputFilterValue);
 
-    if (activeTab == "Completed") return todo.isDone && isIncludeFilteredValue;
-    else if (activeTab == "To do")
-      return !todo.isDone && isIncludeFilteredValue;
+    if (activeTab == "Completed") {
+      return todo.isDone && isIncludeFilteredValue
+    }else if (activeTab == "To do") {
+      return !todo.isDone && isIncludeFilteredValue
+    };
 
     return isIncludeFilteredValue;
   });
@@ -90,11 +100,11 @@ const TodoContainer = () => {
       />
 
       <div className="toolBar">
+        <TodoAddSection addTodo={addTodo}/>
         <TodFilterSection
           onHandleFilterValue={handleFilterValue}
           inputFilterValue={inputFilterValue}
         />
-        <TodoAddSection addTodo={addTodo} />
       </div>
 
       <TodoList
