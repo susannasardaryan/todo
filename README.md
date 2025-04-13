@@ -2,7 +2,7 @@
 
 A sleek and simple ToDo List built with React, designed to help you stay organized and productive. Easily add, filter, complete, and remove tasks — with a modern UI and real-time updates.
 
-![ToDo List Screenshot](./screenshot.png)
+![ToDo List Screenshot](image-1.png)
 
 ## ✨ Features
 
