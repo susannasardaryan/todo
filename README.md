@@ -1,12 +1,45 @@
-# React + Vite
+# 📝 ToDo List App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A sleek and simple ToDo List built with React, designed to help you stay organized and productive. Easily add, filter, complete, and remove tasks — with a modern UI and real-time updates.
 
-Currently, two official plugins are available:
+![ToDo List Screenshot](./screenshot.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## Expanding the ESLint configuration
+- ✅ Add and remove tasks
+- 🎯 Mark tasks as completed
+- 📝 Edit existing tasks
+- 🔍 Filter tasks (All, Completed, To Do)
+- 🕒 Timestamp for when the task was created (day and time)
+- 💾 Save progress button
+- 🎨 Clean, minimal UI with responsive design
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📸 Screenshot
+
+*Tasks are time-stamped and visually styled based on their status:*
+
+- Completed tasks appear with a strikethrough and faded text
+- Buttons for deleting and editing each task
+- Smart filtering between all, completed, and remaining tasks
+
+## 🚀 Getting Started
+
+To run the project locally:
+
+```bash
+git clone https://github.com/your-username/todo-app.git
+cd todo-app
+npm install
+npm start
+```
+
+## 🛠 Tech Stack
+
+- React
+- CSS / Styled Components or Tailwind (depending on your styling)
+- JavaScript (optionally with TypeScript)
+
+
+## 🙌 Acknowledgements
+
+Made with for learning, practicing React, and improving productivity!
